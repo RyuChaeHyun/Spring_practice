@@ -17,7 +17,9 @@ import org.springframework.context.annotation.FilterType;
                 Configuration.class)
 
 )
+//컴포넌트 스캔
 public class AutoAppConfig {
+    
 
 //    @Bean(name = "memoryMemberRepository")
 //    MemberRepository memberRepository(){

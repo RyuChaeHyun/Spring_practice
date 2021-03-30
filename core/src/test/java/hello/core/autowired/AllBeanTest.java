@@ -34,8 +34,8 @@ public class AllBeanTest {
     }
 
     static class DiscountService{
-        private final Map<String, DiscountPolicy> policyMap;
-        private final List<DiscountPolicy> policies;
+        private final Map<String, DiscountPolicy> policyMap; //DiscountPolicy 주입 받음, fixDisounctPolicy & rateDiscountPolicy
+        private final List<DiscountPolicy> policies; //Discount 타입으로 조회한 모든 스프링 빈 담아줌
 
         @Autowired
         public DiscountService(Map<String, DiscountPolicy> policyMap, List<DiscountPolicy> policies) {
@@ -46,6 +46,7 @@ public class AllBeanTest {
         }
 
         public int discount(Member member, int price, String discountCode) {
+            //discountCode로 넘어온 DiscountPolicy 를 map에서 스프링 빈 찾아 실행
             DiscountPolicy discountPolicy = policyMap.get(discountCode);
             return discountPolicy.discount(member, price);
         }

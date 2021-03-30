@@ -17,18 +17,13 @@ public class OrderServiceImpl implements OrderService{
     private final MemberRepository memberRepository;
     private final DiscountPolicy discountPolicy;
 
-
+// 생성자 주입을 선택 , 옵션으로 수정자 주입 사용
     @Autowired
     public OrderServiceImpl(MemberRepository memberRepository, @MainDiscountPolicy DiscountPolicy discountPolicy) {
         this.memberRepository = memberRepository;
         this.discountPolicy = discountPolicy;
     }
 
-//    @Autowired
-//    public OrderServiceImpl(MemberRepository memberRepository, DiscountPolicy fixDiscountPolicy) {
-//        this.memberRepository = memberRepository;
-//        this.discountPolicy = fixDiscountPolicy;
-//    }
 
     //필드 주입
 //    @Autowired private MemberRepository memberRepository;
