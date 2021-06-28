@@ -17,6 +17,7 @@ public class MemberFormServlet extends HttpServlet {
 
     @Override
     protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        //html이니까 body를 잡아주는 부분
         response.setContentType("text/html");
         response.setCharacterEncoding("utf-8");
 
