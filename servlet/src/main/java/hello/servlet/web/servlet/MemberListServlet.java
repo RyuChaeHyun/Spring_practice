@@ -40,14 +40,14 @@ public class MemberListServlet extends HttpServlet {
         w.write(" </thead>");
         w.write(" <tbody>");
 
-//정적인 방법
-//         w.write(" <tr>");
-//         w.write(" <td>1</td>");
-//         w.write(" <td>userA</td>");
-//         w.write(" <td>10</td>");
-//         w.write(" </tr>");
+        //정적인 방법
+        //         w.write(" <tr>");
+        //         w.write(" <td>1</td>");
+        //         w.write(" <td>userA</td>");
+        //         w.write(" <td>10</td>");
+        //         w.write(" </tr>");
 
-//동적인 방법
+        //동적인 방법
         for (Member member : members) {
             w.write(" <tr>");
             w.write(" <td>" + member.getId() + "</td>");
@@ -55,6 +55,7 @@ public class MemberListServlet extends HttpServlet {
             w.write(" <td>" + member.getAge() + "</td>");
             w.write(" </tr>");
            }
+
             w.write(" </tbody>");
             w.write("</table>"); w.write("</body>");
             w.write("</html>");

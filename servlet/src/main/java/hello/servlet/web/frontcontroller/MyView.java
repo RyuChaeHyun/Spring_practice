@@ -23,7 +23,7 @@ public class MyView {
     public void render(Map<String, Object> model, HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
         modelToRequestAttribute(model, request);
         RequestDispatcher dispatcher = request.getRequestDispatcher(viewPath);
-        dispatcher.forward(request, response);
+        dispatcher.forward(request, response); //랜더링
     }
 
     //모델에 있는 데이터를 Request에 다 넣는다

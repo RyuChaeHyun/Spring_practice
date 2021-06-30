@@ -12,6 +12,7 @@ public class MemberSaveControllerV3 implements ControllerV3 {
 
     @Override
     public ModelView process(Map<String, String> paramMap) {
+        //파라미터 정보는 map에 담겨 있어 필요한 요청 파라미터를 map에서 조회
         String username = paramMap.get("username");
         int age = Integer.parseInt(paramMap.get("age"));
 

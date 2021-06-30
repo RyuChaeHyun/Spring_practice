@@ -14,6 +14,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 @WebServlet(name="frontControllerServletV1", urlPatterns = "/front-controller/v1/*")
+//* = 어떤게 들어와도 일단 실행
 public class FrontControllerServletV1 extends HttpServlet {
 
     private Map<String, ControllerV1> controllerMap = new HashMap<>();
