@@ -12,6 +12,7 @@ public class SpringMemberFormControllerV1 {
 
     @RequestMapping("/springmvc/v1/members/new-form")
     public ModelAndView process(){
+        //viewresovler 통헤 일아서 세팅해줌
         return new ModelAndView("new-form");
     }
 }

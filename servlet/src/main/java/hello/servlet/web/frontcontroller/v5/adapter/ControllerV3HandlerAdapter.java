@@ -13,11 +13,13 @@ import java.util.Map;
 
 public class ControllerV3HandlerAdapter implements MyHandlerAdapter {
 
+    //ControllerV3를 처리할 수 있는 어댑터
     @Override
     public boolean supports(Object handler) {
         return (handler instanceof ControllerV3);
     }
 
+    //supports통해 ControllerV3만 거르기 때문에 타입변환 해도 된다.
     @Override
     public ModelView handle(HttpServletRequest request, HttpServletResponse response, Object handler) throws ServletException, IOException {
         //MemberFromControllerV3

@@ -12,5 +12,6 @@ public interface ControllerV4 {
      */
 
     String process(Map<String, String> paramMap, Map<String, Object> model);
+    //모델은 빈 모델
 
 }
