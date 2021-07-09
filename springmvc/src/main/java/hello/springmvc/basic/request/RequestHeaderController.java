@@ -16,6 +16,18 @@ import java.util.Locale;
 @RestController
 public class RequestHeaderController {
 
+    /**
+     *
+     * @param request
+     * @param response
+     * @param httpMethod
+     * @param locale 언어 정보
+     * @param headerMap 모든 http 헤더 조회 , 하나의 키에 여러 값
+     * @param host 하나만 조회하고 싶을 때
+     * @param cookie
+     * @return
+     */
+
     @RequestMapping("/headers")
     public String headers(HttpServletRequest request,
                           HttpServletResponse response,

@@ -37,6 +37,8 @@ public class RequestBodyStringController {
         responseWriter.write("ok");
     }
 
+    //httpmessage converter
+    //HttpEntity : 메시지 바디 정보를 직접 조회/반환(view 조회x)
     @PostMapping("/request-body-string-v3")
     public HttpEntity<String> requestBodyStringV3(HttpEntity<String> httpEntity) throws IOException {
 
@@ -45,8 +47,10 @@ public class RequestBodyStringController {
 
         return new HttpEntity<>("ok");
     }
+    //추가 - RequestEntity, ResponesEntity
+    //http 상태 코드, url 정보 추가 가능
 
-
+    //응답 - ResponseBody, 요청 - RequestBody
     @ResponseBody
     @PostMapping("/request-body-string-v4")
     public String requestBodyStringV4(@RequestBody String messageBody) throws IOException {

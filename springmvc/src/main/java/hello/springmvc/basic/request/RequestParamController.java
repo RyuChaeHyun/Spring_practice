@@ -27,6 +27,7 @@ public class RequestParamController {
     }
 
     @ResponseBody
+    //대신 @RestController 해도 된다
     @RequestMapping("/request-param-v2")
     public String requestParamV2(
             @RequestParam("username") String userName,
@@ -58,13 +59,15 @@ public class RequestParamController {
 
     }
 
+    //required= true 이면 그 값이 꼭 필요(default 값)
+    //int - null 값 x, Integer - null 값 o
+    //파라미터 이름만 았고 값이 없는 경우 -> 빈 문자로 통과(ok)
     @ResponseBody
     @RequestMapping("/request-param-required")
     public String requestParamRequired(
             @RequestParam(required = true) String username,
             @RequestParam(required = false) Integer age) {
-
-        log.info("username={}, age={}", username, age);
+         log.info("username={}, age={}", username, age);
         return "ok";
 
     }
@@ -81,6 +84,8 @@ public class RequestParamController {
         return "ok";
     }
 
+    //파라미터의 값이 1개 확실 -> Map
+    //그렇지 않으면 -> MultiValueMap
     @ResponseBody
     @RequestMapping("/request-param-map")
     public String requestParamMap(@RequestParam Map<String, Object> paramMap) {
@@ -89,6 +94,7 @@ public class RequestParamController {
 
     }
 
+    //프로퍼티 - username, age
     @ResponseBody
     @RequestMapping("/model-attribute-v1")
     public String modelAttributeV1(@ModelAttribute HelloData helloData){
@@ -96,6 +102,7 @@ public class RequestParamController {
         return "ok";
     }
 
+    //단순타입 ModelAttribute 생략 가능
     @ResponseBody
     @RequestMapping("/model-attribute-v2")
     public String modelAttributeV2(HelloData helloData){

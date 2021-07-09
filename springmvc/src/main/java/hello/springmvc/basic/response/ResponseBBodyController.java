@@ -14,7 +14,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 @Slf4j
-@RestController
+@RestController //Controller + ResponseBody
 //@Controller
 //@ResponseBody
 public class ResponseBBodyController {
@@ -38,6 +38,8 @@ public class ResponseBBodyController {
     }
 
     //json
+
+    //상태 코드 동적으로 변경할 때
     @GetMapping("/response-body-json-v1")
     public ResponseEntity<HelloData> responseBodyJsonV1(){
         HelloData helloData = new HelloData();

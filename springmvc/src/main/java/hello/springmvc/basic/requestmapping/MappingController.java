@@ -10,6 +10,11 @@ public class MappingController {
 
     private Logger log = LoggerFactory.getLogger(getClass());
 
+    /**
+     * 속성을 배열로 제공해 다중 설정 가능 (url 여러개 가능)
+     * /hello-basic, /hello-basic/ 다 가능
+     */
+
     @RequestMapping(value = "/hello-basic")
     public String helloBasic() {
         log.info("helloBasic");
@@ -66,6 +71,7 @@ public class MappingController {
 
     /**
      * 파라미터로 추가 매핑
+     * 파라미터가 있어야 호출된다
      * params="mode",
      * params="!mode"
      * params="mode=debug"
@@ -80,6 +86,7 @@ public class MappingController {
 
     /**
      * 특정 헤더로 추가 매핑
+     * 헤더에 지정 값이 있어야 한다.
      * headers="mode",
      * headers="!mode"
      * headers="mode=debug"

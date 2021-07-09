@@ -20,6 +20,7 @@ import java.nio.charset.StandardCharsets;
  * {"username":"hello", "age":20}
  * content-type : application/json
  */
+
 @Slf4j
 @Controller
 public class RequestBodyJsonController {
@@ -48,6 +49,7 @@ public class RequestBodyJsonController {
         return "ok";
     }
 
+    //httpmessageConverter
     @ResponseBody
     @PostMapping("/request-body-json-v3")
     public String requestBodyJsonV3(@RequestBody HelloData helloData) {
