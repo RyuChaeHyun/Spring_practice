@@ -8,6 +8,13 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+/**
+ * Model 도입
+ * ViewName 직접 반환
+ * @RequestParam 사용
+ * @RequestMapping -> @GetMapping, @PostMapping
+ */
+
 @Controller
 @RequestMapping("/springmvc/v3/members")
 public class SpringMemberControllerV3 {
